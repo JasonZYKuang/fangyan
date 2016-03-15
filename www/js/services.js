@@ -47,4 +47,31 @@ angular.module('starter.services', [])
       return null;
     }
   };
+})
+
+.factory('Dialogues', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var dialogues = [
+    { id: 0, name: 'hihi', childens:[
+                                     {cid:0, name: 'h1'},
+                                     {cid:1, name: 'h2'},
+                                     {cid:2, name: 'h3'}
+                                     ]},
+    { id: 1, name: 'G.I. Joe' },
+    { id: 2, name: 'Miss Frizzle' },
+    { id: 3, name: 'Ash Ketchum' },
+    { id: 4, name: 'hihi' }
+  ];
+
+  return {
+    all: function() {
+      return dialogues;
+    },
+    get: function(dialogueId) {
+      // Simple index lookup
+      return dialogues[dialogueId];
+    }
+  }
 });
