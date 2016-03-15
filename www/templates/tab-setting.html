@@ -1,0 +1,32 @@
+<ion-view title="设置" class="scroll-content-1"">
+  <ion-content>
+  	<ion-list>
+  		<ion-list-header>基本设置</ion-list-header>
+  		<ion-item>
+  			<ion-icon name="leaf" item-left></ion-icon>
+      		Herbology
+    		<ion-icon name="rose" item-right></ion-icon>
+  		</ion-item>
+  	</ion-list>
+  
+    <div class="list">
+		<div class="item item-divider-top">
+    		基本设置
+  		</div>
+		<a class="item" ng-controller="actionsheetCtl" ng-click="show()">
+	    	清除历史记录
+	  	</a>
+	  	
+	  	<!-- 其他 -->
+	  	<div class="item item-divider-other">
+    		其他
+  		</div>
+		<a class="item" href="#">
+	    	帮助与介绍
+	  	</a>
+	  	<a class="item" href="#">
+	    	关于
+	  	</a>
+  	</div>
+  </ion-content>
+</ion-view>

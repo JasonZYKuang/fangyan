@@ -45,11 +45,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
+  //setup an abstract state for the tabs directive
+  .state('tab', {
+    url: "/tab",
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: "templates/tabs.html"
   })
 
   // Each tab has its own nav history stack:
@@ -63,7 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
-
+  
   .state('tab.chats', {
       url: '/chats',
       views: {
@@ -73,6 +73,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
@@ -81,14 +82,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
           controller: 'ChatDetailCtrl'
         }
       }
-    })
+    })  
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.dialogues', {
+    url: '/dialogues',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-dialogues': {
+        templateUrl: 'templates/tab-dialogues.html',
+        controller: 'DialoguesCtrl' 
+      }
+    }
+  })
+  .state('tab.dialogue-detail', {
+    url: '/dialogue/:dialogueId',
+    views: {
+      'tab-dialogues': {
+        templateUrl: 'templates/dialogue-detail.html',
+        controller: 'DialogueDetailCtrl'
+      }
+    }
+  })
+
+  .state('tab.setting', {
+    url: '/setting',
+    views: {
+      'tab-setting': {
+        templateUrl: 'templates/tab-setting.html',
+        controller: 'SettingCtrl'
       }
     }
   });
