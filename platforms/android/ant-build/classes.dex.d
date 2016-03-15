@@ -1,0 +1,25 @@
+E:\Workspace\fangyan\platforms\android\ant-build\classes.dex : \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\BuildConfig.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\R$attr.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\R$drawable.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\R$string.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\R$xml.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\R.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\com\ionicframework\sass876066\sass.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\device\Device.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$1.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$2.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$3$1.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$3.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$4$1.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$4.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$5$1.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$5.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen$6.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\splashscreen\SplashScreen.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\statusbar\StatusBar$1.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\statusbar\StatusBar$2.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\statusbar\StatusBar$3.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\statusbar\StatusBar$4.class \
+E:\Workspace\fangyan\platforms\android\ant-build\classes\org\apache\cordova\statusbar\StatusBar.class \
+E:\Workspace\fangyan\platforms\android\ant-build\dexedLibs\classes-14e227f8cdcc1e1047982517a575a980.jar \
