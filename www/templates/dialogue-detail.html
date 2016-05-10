@@ -7,7 +7,7 @@
 <ion-view title="{{dialogue.name}}">
     <ion-content has-header="true">
         <ion-list>
-            <ion-item class="item-icon-right" ng-repeat="detail in details track by $index"
+            <ion-item class="item-icon-right item-text-wrap" ng-repeat="detail in details track by $index"
                       ng-click="playfor(detail.subid,detail.subAudio)">
                 <h2>{{detail.subName}}</h2>
                 <i class="icon ion-ios-mic-off" ng-if="!detail.playing"></i>

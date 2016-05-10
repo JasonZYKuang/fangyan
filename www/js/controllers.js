@@ -1,6 +1,16 @@
 angular.module('starter.controllers', [])
 
     .controller('DashCtrl', function ($scope) {
+        $scope.hideLogo = function(){
+            $scope.logoHide = true;
+        };
+        $scope.showLogo = function(){
+            $scope.logoHide = false;
+        };
+        $scope.loadMore = function(){
+            //$scope.$broadcast().scroll.__finishInfiniteScroll;
+            $scope.$broadcast('scroll.infiniteScrollComplete');
+        }
     })
 
     .controller('ChatsCtrl', function ($scope, chatService) {
@@ -42,7 +52,9 @@ angular.module('starter.controllers', [])
             })
         }, false);
         audio.addEventListener('ended', function () {
-            $scope.details[$scope.detail_subid].playing = false;
+            $scope.$apply(function(){
+                $scope.details[$scope.detail_subid].playing = false;
+            })
         }, false);
         $scope.playfor = function (id, subAudio) {
             $scope.detail_subid = id;

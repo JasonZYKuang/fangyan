@@ -1,17 +1,31 @@
 <ion-view view-title="翻译">
-  <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    aa This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      For help sending push notifications, join the <a href="https://apps.ionic.io/signup" target="_blank">Ionic Platform</a> and check out <a href="http://docs.ionic.io/docs/push-overview" target="_blank">Ionic Push</a>. We also have other services available.
-    </p>
+  <ion-content scroll="false">
+    <div class="list noneBottom">
+      <label class="item item-input">
+        <textarea ng-model="model.message" rows="10" placeholder="在此输入要翻译的内容" ng-click="hideLogo()">
+          {{model.message}}
+        </textarea>
+      </label>
+    </div>
+    <div class="row translateBar">
+      <div class="col" ng-click="showLogo()">关闭</div>
+      <div class="col">翻译</div>
+      <div class="col">清空</div>
+    </div>
+    <div class="logo" ng-if="!logoHide">
+      <div class="divcenter">
+         <img src="img/ionic.png"/>
+        <p>方言翻译通</p>
+      </div>
+    </div>
+    <ion-scroll style="height: 100%;">
+      <ion-list ng-if="logoHide">
+        <ion-item class="item item-divider-top">hello1</ion-item>
+        <ion-item class="item item-divider-top">hello1</ion-item>
+        <ion-item class="item item-divider-top">hello1</ion-item>
+        <ion-item class="item item-divider-top">hello1</ion-item>
+      </ion-list>
+      <ion-infinite-scroll on-infinite="loadMore()"></ion-infinite-scroll>
+    </ion-scroll>
   </ion-content>
 </ion-view>

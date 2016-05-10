@@ -27,16 +27,16 @@
     },
     "installed_plugins": {
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.sass876066"
+            "PACKAGE_NAME": "fangyan.id"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.sass876066"
+            "PACKAGE_NAME": "fangyan.id"
         },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.sass876066"
+            "PACKAGE_NAME": "fangyan.id"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.sass876066"
+            "PACKAGE_NAME": "fangyan.id"
         }
     },
     "dependent_plugins": {}
