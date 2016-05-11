@@ -63,4 +63,18 @@
   color: rgb(180,180,174);
 }
 
+.logo .center{
+/* 	position:absolute;
+    left:50%;top:45%; */
+    padding-top: 160px;
+    text-align: center;
+    color: rgb(180, 180, 174);
+}
+
+.trans{
+	position: relative;
+	padding-top: 10px;
+	padding-left: 0;
+}
+
 
