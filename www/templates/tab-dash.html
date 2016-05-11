@@ -7,10 +7,11 @@
         </textarea>
       </label>
     </div>
+    <div class="trans" ng-if="hasTranslate" ng-click="resub()">{{translate.message}}</div>
     <div class="row translateBar">
-      <div class="col" ng-click="showLogo()">关闭</div>
-      <div class="col">翻译</div>
-      <div class="col">清空</div>
+      <div class="col" ng-click="close()">关闭</div>
+  	  <div class="col" ng-click="translate()">翻译</div>
+  	  <div class="col" ng-click="clear()">清空</div>
     </div>
     <div class="logo" ng-if="!logoHide">
       <div class="divcenter">
@@ -18,8 +19,16 @@
         <p>方言翻译通</p>
       </div>
     </div>
-    <ion-scroll style="height: 100%;">
-      <ion-list ng-if="logoHide">
+    
+    <ion-scroll style="height: 100%;" ng-if="hasTranslate">
+    	<div>
+    		<h3>result</h3>
+    	</div>
+	    <ion-infinite-scroll on-infinite="loadMore()"></ion-infinite-scroll>
+	  </ion-scroll>
+	  
+    <ion-scroll style="height: 100%;" ng-if="logoHide">
+      <ion-list>
         <ion-item class="item item-divider-top">hello1</ion-item>
         <ion-item class="item item-divider-top">hello1</ion-item>
         <ion-item class="item item-divider-top">hello1</ion-item>
