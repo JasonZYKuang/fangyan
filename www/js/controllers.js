@@ -1,16 +1,40 @@
 angular.module('starter.controllers', [])
 
-    .controller('DashCtrl', function ($scope) {
-        $scope.hideLogo = function(){
-            $scope.logoHide = true;
-        };
+    .controller('DashCtrl', function($scope,$ionicPopup,ServerData) {
+        $scope.model = {message:""};
+	    $scope.translate = {message:""};
+	    $scope.hideLogo = function(){
+		    $scope.logoHide = true;
+		    $scope.hasTranslate = false;
+	    };
         $scope.showLogo = function(){
             $scope.logoHide = false;
         };
-        $scope.loadMore = function(){
-            //$scope.$broadcast().scroll.__finishInfiniteScroll;
-            $scope.$broadcast('scroll.infiniteScrollComplete');
-        }
+    	$scope.close = function(){
+    		$scope.logoHide = false;
+    		$scope.hasTranslate = false;
+    	};
+    	$scope.loadMore = function(){
+    	    $scope.$broadcast('scroll.infiniteScrollComplete');
+    	};
+    	$scope.clear = function(){
+    		$scope.model.message = "";
+    		$scope.hasTranslate = false;
+    		//$scope.close();
+    	};
+    	$scope.translate = function(){
+    		if($scope.model.message == ''){
+    			ServerData.alert('翻译内容不能为空。');
+    		};
+    		
+    		$scope.translate.message = $scope.model.message;
+    		//$scope.model.message = "";
+    		$scope.hasTranslate = true;
+    		//$scope.logoHide = false;
+    	};
+    	$scope.resub = function(){
+    		$scope.hasTranslate = false;
+    	};
     })
 
     .controller('ChatsCtrl', function ($scope, chatService) {
@@ -86,6 +110,10 @@ angular.module('starter.controllers', [])
                 cancelText: '<b>取消</b>',
                 cancel: function () {
                     // add cancel code..
+                },
+                destructiveButtonClicked: function () {
+                	console.log("delete historys.");
+            	    return true;
                 },
                 buttonClicked: function (index) {
                     return true;
