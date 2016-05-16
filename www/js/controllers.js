@@ -11,6 +11,7 @@ angular.module('starter.controllers', [])
             $scope.logoHide = false;
         };
     	$scope.close = function(){
+            $scope.model.message = "";
     		$scope.logoHide = false;
     		$scope.hasTranslate = false;
     	};
@@ -23,14 +24,15 @@ angular.module('starter.controllers', [])
     		//$scope.close();
     	};
     	$scope.translate = function(){
-    		if($scope.model.message == ''){
+    		if($scope.model.message.trim() == ''){
     			ServerData.alert('翻译内容不能为空。');
-    		};
-    		
-    		$scope.translate.message = $scope.model.message;
-    		//$scope.model.message = "";
-    		$scope.hasTranslate = true;
-    		//$scope.logoHide = false;
+    		}else{
+                $scope.translate.message = $scope.model.message;
+                //$scope.model.message = "";
+                $scope.hasTranslate = true;
+                //$scope.logoHide = false;
+            };
+
     	};
     	$scope.resub = function(){
     		$scope.hasTranslate = false;
