@@ -64,6 +64,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 }
             })
 
+.state('tab.yuyin', {
+    url: '/yuyin',
+    views: {
+      'tab-yuyin': {
+        templateUrl: 'templates/tab-yuyin.html',
+        controller: 'YuyinCtrl'
+      }
+    }
+  })
+  
             .state('tab.chats', {
                 url: '/chats',
                 views: {
