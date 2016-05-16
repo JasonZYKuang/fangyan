@@ -97,6 +97,18 @@ angular.module('starter.controllers', [])
 
     })
 
+.controller('YuyinCtrl', function($scope,$ionicSideMenuDelegate) {
+	//console.log("yuyin controll");
+})
+
+.controller('SpeakCtrl', function($scope, $ionicSideMenuDelegate) {
+	 /*$scope.toggleLeft = function() {
+	        $ionicSideMenuDelegate.toggleLeft();
+	      };*/
+	
+	console.log("SpeakCtrl");
+})
+
     .controller('SettingCtrl', function ($scope) {
     })
 
