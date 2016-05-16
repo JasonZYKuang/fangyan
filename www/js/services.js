@@ -24,6 +24,25 @@ angular.module('starter.services', [])
             }
         };
     }])
+    
+    .factory('$localstorage', ['$window', function ($window) {
+        return {
+            set: function (key, value) {
+                $window.localStorage[key] = value;
+            },
+            get: function (key, defaultValue) {
+                return $window.localStorage[key] || defaultValue;
+            },
+            setObject: function (key, value) {
+                $window.localStorage[key] = JSON.stringify(value);
+            },
+            getObject: function (key) {
+                console.log('key '+$window.localStorage[key]);
+                return JSON.parse($window.localStorage[key] || null);
+            }
+        }
+}])
+
 
     .factory('chatService', function () {
         // Might use a resource here that returns a JSON array
@@ -85,6 +104,36 @@ angular.module('starter.services', [])
     		}
     	};
     })
+    
+    .factory('Luyin',function($ionicPopup){
+	var data = [];
+	var params = null;
+	var file = "../data/audio/nihao.wav";
+	var reader = new FileReader();
+	
+
+	params = {
+		"headers": {
+		          'Content-Type': 'audio/amr; rate=8000'
+		        },	
+        "format": "wav",
+        "rate": 8000,
+        "channel": 1,
+        cuid: "com.test.myapp",
+        token: "24.cac3afd6cb4710204df36be96702458c.2592000.1465613998.282335-8114838",
+        speech: temp,
+        len: file.size,
+        lan: "ct"
+    };
+	return{
+		postMedia: function() {
+	      data = $http.post("http://vop.baidu.com/server_api", params);
+	      console.log("data="+data);
+	      return data;
+	    }
+	};
+})
+
     
     .factory('DialogueService', function ($http, $q) {
         // Might use a resource here that returns a JSON array
